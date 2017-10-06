@@ -1,9 +1,9 @@
 import socket, sys
 
 if sys.argv < 1:
-	print '[-] python scan [ HOST ]'
+	print '[!] python scan [ HOST ]'
 try:
-	print '\n 	IP:', socket.gethostbyname(sys.argv[1]), '\n'
+	print '\n [+] IP:', socket.gethostbyname(sys.argv[1]), '\n'
 	portas = [1, 5, 7, 9, 11, 13, 17, 19, 20, 21, 22, 23, 25, 26, 35, 37, 38, 39, 41, 42, 43, 49, 53, 57, 67, 68,
 69, 70, 79, 80, 81, 88, 101, 102, 107, 109, 110, 111, 113, 115, 117, 118, 119, 123, 135, 137, 138, 139, 143,
 152, 153, 156, 158, 161, 162, 170, 179, 194, 201, 209, 213, 218, 220, 259, 264, 311, 318, 323, 383, 366, 369,
@@ -34,6 +34,5 @@ try:
 		client.settimeout(0.1)
 		connection = client.connect_ex((sys.argv[1], port))
 		if connection == False:
-			print ' OPEN: ', port
-except KeyboardInterrupt:
-	exit()
+			print ' OPEN <==========>', port
+except KeyboardInterrupt: exit()
