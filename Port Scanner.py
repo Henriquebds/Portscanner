@@ -1,3 +1,5 @@
+#codigo para estudo
+
 import socket, sys
 
 if sys.argv < 1:
